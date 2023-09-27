@@ -1,3 +1,5 @@
+using FizzBuzz.Services;
+
 namespace FizzBuzz.UnitTests.Services
 {
     public class FizzBuzzServiceTests
@@ -5,7 +7,14 @@ namespace FizzBuzz.UnitTests.Services
         [Fact]
         public void GetFizzBuzz_Should_Return_1_If_1_IsPassed()
         {
+            // 1. Arrange
+            var service = new FizzBuzzService();
 
+            // 2. Act
+            var result = service.GetFizzBuzz(1);
+
+            // 3. Assert
+            Assert.Equal("1", result);
         }
     }
 }
