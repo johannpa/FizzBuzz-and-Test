@@ -4,27 +4,24 @@
     {
         public string GetFizzBuzz(int value)
         {
-            if (value % 3 == 0 && value % 5 == 0)
+            string result = string.Empty;
+            
+            if(value % 3 == 0)
             {
-                return "FizzBuzz";
+                result = "Fizz";
             }
-            else
+                
+            if(value % 5 == 0)
             {
-
-                if(value % 3 == 0)
-                {
-                    return "Fizz";
-                }
-                else
-                {
-                    if(value % 5 == 0)
-                    {
-                        return "Buzz";
-                    }
-
-                    return value.ToString();
-                }
+                result += "Buzz";
             }
+
+            if(string.IsNullOrEmpty(result))
+            {
+                result = value.ToString();
+            }
+
+            return result;
 
         }
     }
