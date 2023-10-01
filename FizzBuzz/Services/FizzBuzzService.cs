@@ -4,7 +4,9 @@
     {
         public string GetFizzBuzz(int value)
         {
-            return "1";
+
+            return value.ToString();
+
         }
     }
 }

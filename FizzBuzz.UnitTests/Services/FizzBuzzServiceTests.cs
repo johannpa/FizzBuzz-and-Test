@@ -16,5 +16,18 @@ namespace FizzBuzz.UnitTests.Services
             // 3. Assert
             Assert.Equal("1", result);
         }
+
+        [Fact]
+        public void GetFizzBuzz_Should_Return_2_If_2_IsPassed()
+        {
+            // 1. Arrange
+            var service = new FizzBuzzService();
+
+            // 2. Act
+            var result = service.GetFizzBuzz(2);
+
+            // 3. Assert
+            Assert.Equal("2", result);
+        }
     }
 }
