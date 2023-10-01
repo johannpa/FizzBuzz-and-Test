@@ -29,5 +29,44 @@ namespace FizzBuzz.UnitTests.Services
             // 3. Assert
             Assert.Equal("2", result);
         }
+
+        [Fact]
+        public void GetFizzBuzz_Should_Return_Fizz_If_3_IsPassed()
+        {
+            // 1. Arrange
+            var service = new FizzBuzzService();
+
+            // 2. Act
+            var result = service.GetFizzBuzz(3);
+
+            // 3. Assert
+            Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void GetFizzBuzz_Should_Return_Buzz_If_5_IsPassed()
+        {
+            // 1. Arrange
+            var service = new FizzBuzzService();
+
+            // 2. Act
+            var result = service.GetFizzBuzz(5);
+
+            // 3. Assert
+            Assert.Equal("Buzz", result);
+        }
+
+        [Fact]
+        public void GetFizzBuzz_Should_Return_FizzBuzz_If_15_IsPassed()
+        {
+            // 1. Arrange
+            var service = new FizzBuzzService();
+
+            // 2. Act
+            var result = service.GetFizzBuzz(15);
+
+            // 3. Assert
+            Assert.Equal("FizzBuzz", result);
+        }
     }
 }
